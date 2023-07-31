@@ -29,3 +29,7 @@ class MainPage(BasePage):
     @allure.step('Клик по кнопке "Заказать" внизу')
     def click_button_order_middle(self):
         self.click_on_element(MPL.button_order_middle)
+
+    @allure.step('Скролл до списка вопросов')
+    def scroll_to_question_list(self):
+        self.scroll_to_the_element(MPL.questions_list)

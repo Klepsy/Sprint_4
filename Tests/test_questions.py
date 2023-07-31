@@ -23,7 +23,7 @@ class TestQuestions():
     def test_get_answers_to_questions(self, driver, question, answer, expected_result):
         main_page = MainPage(driver)
         driver.get("https://qa-scooter.praktikum-services.ru/")
-        main_page.scroll_to_questions()
+        main_page.scroll_to_question_list()
         main_page.wait_for_loading(MPL.questions_list)
         assert main_page.get_answer_to_question(question, answer) == expected_result
 

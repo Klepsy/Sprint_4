@@ -5,8 +5,8 @@ class MainPageLocators:
     questions_list = [By.XPATH, ".//div[@class='accordion']"]  # Гармошка с вопросами и ответами
     questions = [By.XPATH, ".//div[contains(@id, 'accordion__heading-')]"]  # Список вопросов
     answers = [By.XPATH, ".//div[contains(@id, 'accordion__panel-')]/p"]  # Список ответов
-    button_order_header = [By.XPATH, ".//button[@class='Button_Button__ra12g']"]  # Кнопка заказа на основной странице
-    button_order_middle = [By.XPATH, ".//button[contains(@class, 'Button_Middle__1CSJM')]"]  # Кнопка заказа снизу
+    button_order_header = [By.XPATH, ".//div[contains(@class, 'Header_Header')]//button[text()='Заказать']"]  # Кнопка заказа на основной странице
+    button_order_middle = [By.XPATH, ".//div[contains(@class, 'Home_ThirdPart')]//button[text()='Заказать']"]  # Кнопка заказа снизу
     logo_scooter = [By.XPATH, ".//*[@alt='Scooter']"]  # Логотип Самокат
     logo_yandex = [By.XPATH, ".//*[@alt='Yandex']"]  # Логотип Яндекс
     yandex_search_input = [By.XPATH,".//iframe[@class='dzen-search-arrow-common__frame' and @aria-label='Поиск Яндекса']"]  # Поисковая строка Яндекса
@@ -24,8 +24,8 @@ class OrderPageLocators:
     scooter_color_black = [By.XPATH, ".//label[@for='black']"]  # Черный цвет
     scooter_color_grey = [By.XPATH, ".//label[@for='grey']"]  # Серый цвет
     field_comment = [By.XPATH, ".//input[@placeholder='Комментарий для курьера']"]  # Поле комментария для курьера
-    button_to_order = [By.XPATH, ".//button[contains(@class, 'Button_Button__ra12g Button_Middle__1CSJM') and text()='Заказать']"]  # Кнопка Заказать на странице заказа
-    yes_button = [By.XPATH, ".//button[contains(@class, 'Button_Button__ra12g Button_Middle__1CSJM') and text()='Да']"]  # Кнопка Да
-    no_button = [By.XPATH, ".//button[contains(@class, 'Button_Button__ra12g Button_Middle__1CSJM') and text()='Нет']"] # Кнопка Нет
+    button_to_order = [By.XPATH, ".//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']"]  # Кнопка Заказать на странице заказа
+    yes_button = [By.XPATH, ".//div[contains(@class, 'Order_Modal')]//button[text()='Да']"]  # Кнопка Да
+    no_button = [By.XPATH, ".//div[contains(@class, 'Order_Modal')]//button[text()='Нет']"] # Кнопка Нет
     button_check_status = [By.XPATH, ".//button[text()='Посмотреть статус']"]  # Кнопка Посмотреть статус
     cancel_order_button = [By.XPATH, ".//button[text()='Отменить заказ']"] # Кнопка Отменить заказ

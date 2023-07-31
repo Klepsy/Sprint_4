@@ -6,9 +6,10 @@ class BasePage():
     def __init__(self, driver):
         self.driver = driver
 
-    @allure.step('Скролл до блока вопросов')
-    def scroll_to_questions(self):
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    @allure.step('Скролл к элементу страницы')
+    def scroll_to_the_element(self, locator):
+        element = self.driver.find_element(*locator)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
     @allure.step('Ожидание загрузки страницы по элементу')
     def wait_for_loading(self, locator):

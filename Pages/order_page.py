@@ -65,3 +65,18 @@ class OrderPage(BasePage):
         self.wait_for_loading(OPL.cancel_order_button)
         return self.get_text_of_the_element(OPL.cancel_order_button)
 
+    @allure.step('Заполняем поля заказа на 1й странице')
+    def fill_order_data1(self):
+        self.wait_for_loading(OPL.field_name)
+        self.enter_name()
+        self.enter_last_name()
+        self.enter_address_name()
+        self.enter_metro_station()
+        self.enter_phone_number()
+
+    @allure.step('Заполняем поля заказа на 2й странице')
+    def fill_order_data2(self):
+        self.wait_for_loading(OPL.field_when_to_bring)
+        self.enter_delivery_date()
+        self.enter_rental_period()
+        self.enter_comment_courier()
